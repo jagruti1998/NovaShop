@@ -1,9 +1,31 @@
 # NovaShop 
 
-Created an Online Shopping Portal using Spring Boot.
+# Online Shopping Portal
 
-IntelliQuiz is a web-based application that allows users to create, participate in, and manage quizzes. 
-The application supports CRUD operations for quizes and questions, categorization, and quiz submission. It uses a RESTful API to handle requests and responses between the frontend and backend.
+This is an online shopping portal developed using Spring Boot and microservices architecture. The first microservice implemented is the Product Service, which handles various operations related to products and stores data in MongoDB.
+
+## Features
+
+- Create a product
+- Get a list of products
+- Get a product by ID
+- Get products by category
+- Update a product
+- Delete a product
+
+## Technologies Used
+
+- Java
+- Spring Boot
+- Microservices
+- MongoDB
+- Gradle
+
+## Endpoints
+
+### Create a Product
+
+
 
 
 ### Technologies/Tools used: </br>

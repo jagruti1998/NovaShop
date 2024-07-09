@@ -1,6 +1,6 @@
 # NovaShop 
 
-Creating a REST API with Spring Boot for a Quiz Application.
+Created an Online Shopping Portal using Spring Boot.
 
 IntelliQuiz is a web-based application that allows users to create, participate in, and manage quizzes. 
 The application supports CRUD operations for quizes and questions, categorization, and quiz submission. It uses a RESTful API to handle requests and responses between the frontend and backend.

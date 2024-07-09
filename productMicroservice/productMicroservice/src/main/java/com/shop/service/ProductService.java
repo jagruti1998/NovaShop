@@ -2,16 +2,17 @@ package com.shop.service;
 
 import com.shop.dto.Product;
 import com.shop.repository.ProductRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
+@Slf4j
 @Service
 public class ProductService {
 
     private ProductRepository productRepository;
+
 
     public ProductService(ProductRepository productRepository) {
         this.productRepository = productRepository;
@@ -19,6 +20,7 @@ public class ProductService {
 
 
     public String addProduct(Product product) {
+        log.info("adding product");
         productRepository.save(product);
         return "success";
     }

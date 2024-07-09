@@ -2,6 +2,7 @@ package com.shop.controller;
 
 import com.shop.dto.Product;
 import com.shop.service.ProductService;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -10,11 +11,12 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Slf4j
 @RestController
 @RequestMapping("/v1")
 public class ProductController {
 
-    Logger logger= LoggerFactory.getLogger(ProductController.class);
+   // Logger logger= LoggerFactory.getLogger(ProductController.class);
 
     private ProductService productService;
 
@@ -25,7 +27,7 @@ public class ProductController {
     @PostMapping("addProduct")
     ResponseEntity<Product> addProduct(@RequestBody Product product){
         String status=productService.addProduct(product);
-        logger.info("Product added status - {}",status);
+        log.info("Product added status - {}",status);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(product );
     }
@@ -42,6 +44,7 @@ public class ProductController {
 
     @GetMapping("/product/{id}")
     Product productById(@PathVariable int id){
+
         return productService.productById(id);
     }
 
@@ -53,6 +56,7 @@ public class ProductController {
 
     @DeleteMapping("/product/{id}")
     String  deleteById(@PathVariable int id){
+
         return productService.deleteById(id);
     }
 

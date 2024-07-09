@@ -1,6 +1,12 @@
 server:
-  port:8084
+  port: 8084
 
 spring:
   application:
     name: productMicroservice
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: novaShop

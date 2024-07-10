@@ -39,7 +39,7 @@ public class ProductService {
         return productRepository.findByCategory(category);
     }
 
-    public Product productById(int id) {
+    public Product productById(String id) {
         return productRepository.findById(id).get();
 
     }
@@ -50,7 +50,7 @@ public class ProductService {
 
     }
 
-    public String deleteById(int id) {
+    public String deleteById(String id) {
         productRepository.deleteById(id);
         return "product deleted";
     }

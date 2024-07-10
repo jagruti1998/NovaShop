@@ -16,12 +16,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Product {
 
     @Id
-    private int id;
+    private String id;
 
     @NotNull(message = "product name should not be null")
     private String name;
 
-    @NotNull(message = "category should not be null")
+    @NotNull(message = "category of the product should not be null")
     private Category category;
 
     @Min(0)//i don't want to be negative

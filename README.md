@@ -82,9 +82,16 @@ NovaShop is an online shopping portal developed using Spring Boot and microservi
   "discountDescription": "year end sale offer"
 }
 
+
 #### 6. Delete a Product
 
 - **Endpoint:** DELETE `/v1/Product/{id}`
 - **Description:** Deletes a product from the database.
 - **Path Variable:** id - The ID of the product to delete.
+
+
+
+## License
+
+These projects are licensed under the [MIT License](LICENSE).
 

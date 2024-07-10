@@ -2,6 +2,7 @@ package com.shop.controller;
 
 import com.shop.dto.Product;
 import com.shop.service.ProductService;
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,8 +25,8 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @PostMapping("addProduct")
-    ResponseEntity<Product> addProduct(@RequestBody Product product){
+    @PostMapping("/addProduct")
+    ResponseEntity<Product> addProduct(@RequestBody @Valid Product product){
         String status=productService.addProduct(product);
         log.info("Product added status - {}",status);
 
@@ -59,10 +60,5 @@ public class ProductController {
 
         return productService.deleteById(id);
     }
-
-
-
-
-
 
 }

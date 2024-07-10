@@ -15,11 +15,13 @@ public class ProductService {
 
 
     public ProductService(ProductRepository productRepository) {
+
         this.productRepository = productRepository;
     }
 
 
     public String addProduct(Product product) {
+
         log.info("adding product");
         productRepository.save(product);
         return "success";

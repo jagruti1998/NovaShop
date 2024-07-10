@@ -10,3 +10,11 @@ spring:
       host: localhost
       port: 27017
       database: novaShop
+  profiles:
+    active: dev
+
+product:
+  currencies:
+    - INR
+    - USD
+    - EUR

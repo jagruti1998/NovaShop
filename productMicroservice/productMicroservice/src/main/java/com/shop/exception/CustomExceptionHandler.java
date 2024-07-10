@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 @ControllerAdvice
 public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
 
-    @ExceptionHandler({OfferNotValidException.class})
+    @ExceptionHandler({OfferNotValidException.class,CurrencyNotValidException.class})
     ResponseEntity<?>offerNotValidHandler(Exception ex, ServletWebRequest request){
 
         APIError apiError =new APIError();

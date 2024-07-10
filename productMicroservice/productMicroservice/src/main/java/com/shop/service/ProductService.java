@@ -1,6 +1,7 @@
 package com.shop.service;
 
 import com.shop.dto.Product;
+import com.shop.exception.OfferNotValidException;
 import com.shop.repository.ProductRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -21,6 +22,9 @@ public class ProductService {
 
 
     public String addProduct(Product product) {
+        if(product.getPrice()==0 && product.getDiscount()>0){
+            throw new OfferNotValidException(" No discount is allowed at 0 product price");
+        }
 
         log.info("adding product");
         productRepository.save(product);
